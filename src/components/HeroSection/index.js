@@ -38,8 +38,8 @@ export const HeroBg = styled.div`
   max-width: 1360px;
   overflow: hidden;
   padding: 0 30px;
-  top: 50%;
-  left: 50%;
+  top: 45%;
+  left: 55%;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 
