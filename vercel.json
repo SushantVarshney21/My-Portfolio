@@ -1,14 +1,8 @@
 {
-    "builds": [
-      {
-        "src": "#about",
-        "use": "@vercel/node"
-      }
-    ],
     "routes": [
       {
-        "src": "/.*",
-        "dest": "#about"
+        "src": "/",
+        "dest": "/"
       }
     ]
   }
