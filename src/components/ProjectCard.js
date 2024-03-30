@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 
 
-const Button = styled.button`
+const Button = styled.a`
     display: none;
     width: 100%;
     padding: 10px;
@@ -11,6 +11,8 @@ const Button = styled.button`
     font-size: 14px;
     font-weight: 700;
     border: none;
+    text-decoration:none;
+    text-align:center;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.8s ease-in-out;
@@ -107,25 +109,12 @@ const Description = styled.div`
     text-overflow: ellipsis;
 `
 
-// const Members = styled.div`
-//     display: flex;
-//     align-items: center;
-//     padding-left: 10px;
-// `
-// const Avatar = styled.img`
-//     width: 38px;
-//     height: 38px;
-//     border-radius: 50%;
-//     margin-left: -10px;
-//     background-color: ${({ theme }) => theme.white};
-//     box-shadow: 0 0 10px rgba(0,0,0,0.2);
-//     border: 3px solid ${({ theme }) => theme.card};
-// `
 
 
-const ProjectCard = ({project,setOpenModal}) => {
+
+const ProjectCard = ({project}) => {
   return (
-    <Card onClick={() => setOpenModal({state: true, project: project})}>
+    <Card >
             <Image src={project.image}/>
             <Tags>
                 {project.tags?.map((tag) => (
@@ -137,12 +126,8 @@ const ProjectCard = ({project,setOpenModal}) => {
                 <Date>{project.date}</Date>
                 <Description>{project.description}</Description>
             </Details>
-            {/* <Members>
-                {project.member?.map((member) => (
-                    <Avatar src={member.img}/>
-                ))}
-            </Members> */}
-            {/* <Button>View Project</Button> */}
+            
+            <Button href={project.webapp} target='display'>View Project</Button>
         </Card>
   )
 }

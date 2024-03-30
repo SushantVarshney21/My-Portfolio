@@ -78,22 +78,13 @@ const Projects = () => {
     <Wrapper>
       <Title>Projects</Title>
       <Desc>
-        I have worked on a wide range of projects. From web apps to android apps. Here are some of my projects.
+        I have worked on a wide range of web apps projects.<br/> Here are some of my projects.
       </Desc>
     
       <CardContainer>
         {projects.map((project) => (
           <ProjectCard project={project} />
         ))}
-        {/* {toggle === 'all' && projects
-          .map((project) => (
-            <ProjectCard project={project} openModal={openModal} setOpenModal={setOpenModal}/>
-          ))}
-        {projects
-          .filter((item) => item.category == toggle)
-          .map((project) => (
-            <ProjectCard project={project} openModal={openModal} setOpenModal={setOpenModal}/>
-          ))} */}
       </CardContainer>
     </Wrapper>
   </Container>
